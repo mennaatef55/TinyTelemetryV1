@@ -37,7 +37,7 @@ try:
         else:
             print(f"[SERVER] DATA from {header.device_id} seq={header.seq_num}, value={value}, flags={header.flags}, recv={header.timestamp}\n")
 
-        writer.writerow([header.device_id, header.seq_num, header.timestamp, header.msg_type, value])
+        writer.writerow([header.device_id, header.seq_num, header.timestamp,header.flags ,header.msg_type, value])
         temp_csv.flush()
 
 except KeyboardInterrupt:
